@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Projects | Euler Letters AI</title>
+    <meta name="description" content="Open-source projects by Euler Letters AI — libraries and tools for synthetic data generation." />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="assets/logo_transparent.png" />
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="index.html#top" aria-label="Euler Letters AI Home">
+                <img class="brand-mark" src="assets/logo_header.png" alt="Euler Letters AI logo" />
+            </a>
+
+            <nav class="nav">
+                <a href="index.html#introduction">Introduction</a>
+                <a href="index.html#lead-profile">Lead</a>
+                <a href="publications.html">Publications</a>
+                <a href="projects.html">Projects</a>
+                <a href="index.html#references">References</a>
+                <a class="nav-cta" href="index.html#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="top">
+        <section class="hero">
+            <div class="container">
+                <div class="hero-shell">
+                    <p class="eyebrow">Open source · Python libraries · Synthetic data</p>
+                    <h1>
+                        Projects
+                        <span class="accent">and open-source libraries</span>
+                    </h1>
+                    <p class="lead">
+                        Open-source tools developed by <strong>Euler Letters AI</strong> to support reproducible,
+                        practical synthetic-data workflows in research and engineering.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="button primary" href="publications.html">View publications</a>
+                        <a class="button ghost" href="index.html#contact">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2>Synthetic Data Generation</h2>
+                <div class="card">
+                    <ul class="refs" style="list-style: none; padding: 0; margin: 0;">
+
+                        <li style="padding: 1.4rem 0; border-bottom: 1px solid var(--line-soft);">
+                            <a href="https://github.com/EulerLettersAI/ifcfill"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               style="font-size: 1.1rem; font-weight: 600; color: var(--emerald-bright); text-decoration: none;">
+                                ifcfill
+                            </a>
+                            <p style="margin: 0.45rem 0 0; color: var(--muted-strong);">
+                                A Python library for preparing tabular data for synthetic-data generation. It transforms
+                                real tabular data into Integer, Float, and Categorical (IFC) variables with
+                                NumPy-powered missing-value imputation, then applies the same learned inverse
+                                transformation to generated synthetic data so it can be mapped back to the original
+                                table structure. Supports automatic type inference, configurable fill strategies per
+                                column type, optional label encoding, and a portable fitted state that can be saved
+                                and reloaded across machines.
+                            </p>
+                        </li>
+
+                        <li style="padding: 1.4rem 0;">
+                            <a href="https://github.com/EulerLettersAI/seqtrees"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               style="font-size: 1.1rem; font-weight: 600; color: var(--emerald-bright); text-decoration: none;">
+                                seqtrees
+                            </a>
+                            <p style="margin: 0.45rem 0 0; color: var(--muted-strong);">
+                                A Python library for generating synthetic tabular data using sequential tree models.
+                                It factorizes a table into a chain of conditional distributions — fitting a decision
+                                tree for each variable conditioned on all previous variables in the sequence — based
+                                on the approach of El Emam, Mosquera, and Zheng (2020). Supports greedy variable
+                                ordering, parallel fitting and sampling, LightGBM and scikit-learn tree backends,
+                                and within-leaf interpolation for continuous columns. Pure-Python core with no
+                                mandatory runtime dependencies.
+                            </p>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="muted">© <span id="year"></span> Euler Letters AI</div>
+            <div class="muted">Built on GitHub Pages</div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
