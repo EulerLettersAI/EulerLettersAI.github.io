@@ -18,7 +18,7 @@
                 <img class="brand-mark" src="assets/logo_header.png" alt="Euler Letters AI logo" />
             </a>
 
-            <nav class="nav">
+            <nav class="nav" id="main-nav">
                 <a href="#introduction">Introduction</a>
                 <a href="#lead-profile">Lead</a>
                 <a href="publications.html">Publications</a>
@@ -26,6 +26,9 @@
                 <a href="#references">References</a>
                 <a class="nav-cta" href="#contact">Contact</a>
             </nav>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </header>
 
@@ -173,8 +176,8 @@
         <section id="lead-profile" class="section alt">
             <div class="container">
                 <h2>Lead: Samer El Kababji</h2>
-                <div class="card" style="display: flex; gap: 1.5rem; align-items: flex-start;">
-                    <img src="assets/9008.png" alt="Samer El Kababji" style="width: 200px; height: 280px;" />
+                <div class="card lead-card">
+                    <img src="assets/9008.png" alt="Samer El Kababji" class="lead-photo" />
                     <div>
                     <p>
                         Samer El Kababji’s background reflects the multidisciplinary spirit of Euler Letters AI. He is a
@@ -257,6 +260,16 @@
 
     <script>
         document.getElementById("year").textContent = new Date().getFullYear();
+        const toggle = document.getElementById('nav-toggle');
+        const nav = document.getElementById('main-nav');
+        toggle.addEventListener('click', () => {
+            const open = nav.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', open);
+        });
+        nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+            nav.classList.remove('open');
+            toggle.setAttribute('aria-expanded', 'false');
+        }));
     </script>
 </body>
 

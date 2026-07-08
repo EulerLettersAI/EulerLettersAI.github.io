@@ -365,6 +365,56 @@ blockquote .cite {
   line-height: 1.4;
 }
 
+/* HAMBURGER BUTTON */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #064e3b;
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.2s ease;
+}
+
+.nav-toggle[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.nav-toggle[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.nav-toggle[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.lead-card {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.lead-photo {
+  width: 200px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
 .site-footer {
   border-top: 1px solid var(--line-soft);
   padding: 24px 0;
@@ -379,21 +429,38 @@ blockquote .cite {
 
 @media (max-width: 860px) {
   .header-inner {
-    align-items: flex-start;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
   }
 
   .brand-mark {
-    width: min(150px, 58vw);
+    width: min(150px, 52vw);
+  }
+
+  .nav-toggle {
+    display: flex;
   }
 
   .nav {
-    gap: 6px;
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    padding: 6px 0 12px;
+    order: 3;
     justify-content: flex-start;
+  }
+
+  .nav.open {
+    display: flex;
   }
 
   .nav a {
     font-size: 16px;
+    width: 100%;
+    padding: 10px 10px;
   }
 
   .float-image {
@@ -401,5 +468,16 @@ blockquote .cite {
     margin: 0 auto 16px;
     max-width: 100%;
     width: 100%;
+  }
+
+  .lead-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .lead-photo {
+    width: 100%;
+    max-width: 260px;
+    height: auto;
   }
 }
