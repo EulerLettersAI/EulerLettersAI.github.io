@@ -94,7 +94,8 @@ header nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 0;
+  /* Keep header content on the same 22px gutter as every body container. */
+  padding: 10px 22px;
   gap: 24px;
 }
 
