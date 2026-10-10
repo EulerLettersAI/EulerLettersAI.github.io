@@ -38,10 +38,10 @@
         <section class="hero">
             <div class="container">
                 <div class="hero-shell">
-                    <p class="eyebrow">Open source · Python libraries · Synthetic data</p>
+                    <p class="eyebrow">Open Source · Python Libraries · Synthetic Data</p>
                     <h1>
                         Projects
-                        <span class="accent">and open-source libraries</span>
+                        <span class="accent">And Open-Source Libraries</span>
                     </h1>
                     <p class="lead">
                         Open-source tools developed by <strong>Euler Letters AI</strong> to support reproducible,
@@ -57,18 +57,20 @@
 
         <section class="section">
             <div class="container">
-                <h2>Synthetic Data Generation</h2>
-                <div class="card">
-                    <ul class="refs" style="list-style: none; padding: 0; margin: 0;">
-
-                        <li style="padding: 1.4rem 0; border-bottom: 1px solid var(--line-soft);">
-                            <a href="https://github.com/EulerLettersAI/ifcfill"
+                <h2>Open-Source Libraries</h2>
+                <div class="card projects-card">
+                    <div class="project-list">
+                        <article class="project-entry">
+                            <a class="project-link-card"
+                               href="https://github.com/EulerLettersAI/ifcfill"
                                target="_blank"
                                rel="noopener noreferrer"
-                               style="font-size: 1.1rem; font-weight: 600; color: var(--emerald-bright); text-decoration: none;">
-                                ifcfill
+                               aria-label="View ifcfill on GitHub (opens in a new tab)">
+                                <span class="project-link-kicker">Python Library</span>
+                                <span class="project-link-name">ifcfill</span>
+                                <span class="project-link-arrow" aria-hidden="true">↗</span>
                             </a>
-                            <p style="margin: 0.45rem 0 0; color: var(--muted-strong);">
+                            <p class="project-description">
                                 A Python library for preparing tabular data for synthetic-data generation. It transforms
                                 real tabular data into Integer, Float, and Categorical (IFC) variables with
                                 NumPy-powered missing-value imputation, then applies the same learned inverse
@@ -77,16 +79,19 @@
                                 column type, optional label encoding, and a portable fitted state that can be saved
                                 and reloaded across machines.
                             </p>
-                        </li>
+                        </article>
 
-                        <li style="padding: 1.4rem 0;">
-                            <a href="https://github.com/EulerLettersAI/seqtrees"
+                        <article class="project-entry">
+                            <a class="project-link-card"
+                               href="https://github.com/EulerLettersAI/seqtrees"
                                target="_blank"
                                rel="noopener noreferrer"
-                               style="font-size: 1.1rem; font-weight: 600; color: var(--emerald-bright); text-decoration: none;">
-                                seqtrees
+                               aria-label="View seqtrees on GitHub (opens in a new tab)">
+                                <span class="project-link-kicker">Python Library</span>
+                                <span class="project-link-name">seqtrees</span>
+                                <span class="project-link-arrow" aria-hidden="true">↗</span>
                             </a>
-                            <p style="margin: 0.45rem 0 0; color: var(--muted-strong);">
+                            <p class="project-description">
                                 A Python library for generating synthetic tabular data using sequential tree models.
                                 It factorizes a table into a chain of conditional distributions — fitting a decision
                                 tree for each variable conditioned on all previous variables in the sequence — based
@@ -95,10 +100,16 @@
                                 and within-leaf interpolation for continuous columns. Pure-Python core with no
                                 mandatory runtime dependencies.
                             </p>
-                        </li>
-
-                    </ul>
+                        </article>
+                    </div>
                 </div>
+            </div>
+        </section>
+
+        <section id="capstone-projects" class="section capstone-section" aria-labelledby="capstone-projects-title">
+            <div class="container">
+                <div class="projects-section-divider" aria-hidden="true"></div>
+                <h2 id="capstone-projects-title">Capstone Projects</h2>
             </div>
         </section>
     </main>
