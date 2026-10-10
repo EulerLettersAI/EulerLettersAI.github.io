@@ -300,6 +300,7 @@ p {
 
 .project-link-card {
   position: relative;
+  display: block;
   float: left;
   width: min(210px, 42%);
   min-height: 116px;
